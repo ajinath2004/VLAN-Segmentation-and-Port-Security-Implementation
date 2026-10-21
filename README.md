@@ -123,4 +123,5 @@ Here is the exact step-by-step CLI execution shown in the terminal for configuri
 
  ### Successful Port Recovery and Network Restoration
  <img width="752" height="670" alt="Screenshot 2026-10-18 215056" src="https://github.com/user-attachments/assets/de680848-cadd-4fff-9536-0df2f640b7f1" />
+ 
  - Authorized communication for PC9 was fully restored, confirming that sticky MAC port security safely recovers and operates as intended once rogue devices are disconnected.
