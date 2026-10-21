@@ -116,9 +116,13 @@ Here is the exact step-by-step CLI execution shown in the terminal for configuri
   <img width="732" height="657" alt="Screenshot 2026-10-18 214917" src="https://github.com/user-attachments/assets/e7b0b88b-c64d-4359-a39b-d919f077b02f" />
 
   Reset the Interface on Switch CLI
+  
  ***Switch# configure terminal***
+ 
  ***Switch(config)# interface fastEthernet 0/9***
+ 
  ***Switch(config-if)# shutdown***
+ 
  ***Switch(config-if)# no shutdown***
 
  ### Successful Port Recovery and Network Restoration
