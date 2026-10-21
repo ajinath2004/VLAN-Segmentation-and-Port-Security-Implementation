@@ -63,22 +63,22 @@ Here is the exact step-by-step CLI execution shown in the terminal for configuri
 
 # Command Breakdown & Explanation
 
-- **config terminal**
+- ***config terminal***
 This command takes you into global configuration mode, which allows you to make changes to the switch settings.
 
-- **interface fastEthernet 0/1 (or int fa0/1)**
+- ***interface fastEthernet 0/1 (or int fa0/1)***
 This selects the specific port (fa0/1) on the switch where the PC is physically plugged in.
 
-- **switchport mode access**
+- ***switchport mode access***
 This sets the port mode to "Access," meaning this port is intended for connecting a single end-user device like a PC or Laptop.
 
-- **switchport access vlan 2**
+- ***switchport access vlan 2***
 This assigns the selected port to VLAN 2, making it part of the Finance Department network.
 
-- **switchport port-security**
+- ***switchport port-security***
 This turns on the Port Security feature on this specific port.
 
-- **switchport port-security maximum 1 (or max 1)**
+- ***switchport port-security maximum 1 (or max 1)***
 This restricts the port to allow only 1 connected device at a time, preventing multiple devices or splitters from connecting.
 
 - **switchport port-security violation shutdown**
