@@ -64,25 +64,30 @@ Here is the exact step-by-step CLI execution shown in the terminal for configuri
 # Command Breakdown & Explanation
 
 - ***config terminal***
-This command takes you into global configuration mode, which allows you to make changes to the switch settings.
+  This command takes you into global configuration mode, which allows you to make changes to the switch settings.
 
 - ***interface fastEthernet 0/1 (or int fa0/1)***
-This selects the specific port (fa0/1) on the switch where the PC is physically plugged in.
+  This selects the specific port (fa0/1) on the switch where the PC is physically plugged in.
 
 - ***switchport mode access***
-This sets the port mode to "Access," meaning this port is intended for connecting a single end-user device like a PC or Laptop.
+  This sets the port mode to "Access," meaning this port is intended for connecting a single end-user device like a PC or Laptop.
 
 - ***switchport access vlan 2***
-This assigns the selected port to VLAN 2, making it part of the Finance Department network.
+  This assigns the selected port to VLAN 2, making it part of the Finance Department network.
 
 - ***switchport port-security***
-This turns on the Port Security feature on this specific port.
+  This turns on the Port Security feature on this specific port.
 
 - ***switchport port-security maximum 1 (or max 1)***
-This restricts the port to allow only 1 connected device at a time, preventing multiple devices or splitters from connecting.
+  This restricts the port to allow only 1 connected device at a time, preventing multiple devices or splitters from connecting.
 
 - **switchport port-security violation shutdown**
-If an unauthorized device or attacker tries to plug into this port, the switch will instantly shut down the port (err-disable state) to protect the network.
+  If an unauthorized device or attacker tries to plug into this port, the switch will instantly shut down the port (err-disable state) to protect the network.
 
 - **switchport port-security mac-address sticky**
-This tells the switch to automatically learn the connected PC's MAC address and permanently attach it to the port's running configuration.
+  This tells the switch to automatically learn the connected PC's MAC address and permanently attach it to the port's running configuration.
+
+- need to follow these exact same steps for every other PC in the network. The only things that change are the port number in interface fastEthernet 0/? (depending on which switch port the   PC is plugged into, like fa0/2, fa0/3, etc.) and the VLAN ID (access vlan 2, vlan 3, etc.) corresponding to that PC's department.
+
+### Verifying MAC Address Table and Port Security Binding
+- To confirm that VLAN assignment and sticky port security were applied correctly, I ran the # show mac-address-table #command on Switch0 via the console terminal
