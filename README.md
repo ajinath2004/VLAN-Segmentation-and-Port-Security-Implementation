@@ -104,7 +104,7 @@ Here is the exact step-by-step CLI execution shown in the terminal for configuri
   <img width="1060" height="656" alt="Screenshot 2026-10-18 214844" src="https://github.com/user-attachments/assets/925d0f22-f14c-4936-a395-2324f8f6116c" />
 - Simulating an Unauthorized Device Connection (Security Violation)Action: An unauthorized rogue pc (PC13) was connected to port FastEthernet 0/9, which was previously allocated to
   Finance PC PC9. 
-- As soon as PC13 attempted to send traffic, Switch0 detected an unknown MAC address on port Fa0/10.   
+- As soon as PC13 attempted to send traffic, Switch0 detected an unknown MAC address on port Fa0/9.   
 - Result: The switch immediately triggered a Violation, placing port Fa0/9 into an err-disable (shutdown) state. As shown in the topology, both link lights turned Red, blocking all 
   network communication to and from
 
@@ -117,7 +117,7 @@ Here is the exact step-by-step CLI execution shown in the terminal for configuri
 
   Reset the Interface on Switch CLI
  ***Switch# configure terminal***
- ***Switch(config)# interface fastEthernet 0/10***
+ ***Switch(config)# interface fastEthernet 0/9***
  ***Switch(config-if)# shutdown***
  ***Switch(config-if)# no shutdown***
 
